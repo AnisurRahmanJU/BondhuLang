@@ -1,0 +1,91 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  border-top: 10px solid #ff6600;
+  border-bottom: 10px solid #ff6600;
+}
+
+textarea {
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid #fff;
+  margin: 10px 0;
+  padding: 10px;
+  width: 90%;
+  height: 400px; /* Set height to 400px */
+  background-color: #343a40;
+  color: white;
+  overflow: auto;
+  resize: vertical;
+}
+
+button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #cc5200;
+}
+
+#output {
+  background-color: #444;
+  padding: 10px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  width: 90%;
+  height: 150px;
+}
+
+#examples {
+  border-top: 3px solid #ff6600;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+#examples h2 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+#examples pre {
+  background-color: #555;
+  border-left: 5px solid #ff6600;
+  padding: 10px;
+  overflow: auto;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  textarea,
+  button,
+  #output {
+    width: calc(100% - 10px);
+  }
+
+  textarea {
+    height: 200px;
+  }
+}
