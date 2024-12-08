@@ -3,73 +3,73 @@
 ## Output
 
 ```py
-bol toh bondhu ("kire mama!");
+bol toh bondhu ("kire bondhu!");
 ```
 ## Variable
 ```py
-mama aida hoilo day = "Sunday";
-mama aida hoilo temperature = 25;
-mama aida hoilo isSunny = haw mama;
-mama aida hoilo counter = 0;
+bondhu aida hoilo day = "Sunday";
+bondhu aida hoilo temperature = 25;
+bondhu aida hoilo isSunny = haw bondhu;
+bondhu aida hoilo counter = 0;
 ```
 ## Types
 ```py
- mama aida hoilo a = 10;
- mama aida hoilo b = 10 + (15*20);
- mama aida hoilo c = "duita";
- mama aida hoilo d = 'acha thikasey';
- mama aida hoilo e = kisuina mama;
- mama aida hoilo f = haw mama;
- mama aida hoilo g = nah mama;
+ bondhu aida hoilo a = 10;
+ bondhu aida hoilo b = 10 + (15*20);
+ bondhu aida hoilo c = "duita";
+ bondhu aida hoilo d = 'acha thikasey';
+ bondhu aida hoilo e = kisuina bondhu;
+ bondhu aida hoilo f = haw bondhu;
+ bondhu aida hoilo g = nah bondhu;
 ```
 ## Example
 ```py
-mama aida hoilo manushJon = 5;
-mama aida hoilo koiGhontaKoraLagbe = 8;
-mama aida hoilo shobMilayaKotoKhonLagbe = manushJon * koiGhontaKoraLagbe;
-bol toh mama("Shob miliya koto ghonta kamla khatesi amra hoilo = " + shobMilayaKotoKhonLagbe);
+bondhu aida hoilo manushJon = 5;
+bondhu aida hoilo koiGhontaKoraLagbe = 8;
+bondhu aida hoilo shobMilayaKotoKhonLagbe = manushJon * koiGhontaKoraLagbe;
+bol toh bondhu("Shob miliya koto ghonta kamla khatesi amra hoilo = " + shobMilayaKotoKhonLagbe);
  ```
 ## Conditional
 ```py
 temperature = 30
-jodi mama (temperature > 30) {
-  bol toh mama ("Gorom lagtese mama, AC chalao mama!");
-} nah hoile mama (temperature < 20) {
-  bol toh mama ("Thanda lagtese mama, sweater porum mama!");
+jodi bondhu (temperature > 30) {
+  bol toh bondhu ("Gorom lagtese bondhu, AC chalao bondhu!");
+} nah hoile bondhu (temperature < 20) {
+  bol toh bondhu ("Thanda lagtese bondhu, sweater porum bondhu!");
 } akdom e nah hoile {
-  bol toh mama ("Aajke weather besh comfortable, mama!");
+  bol toh bondhu ("Aajke weather besh comfortable, bondhu!");
 }
  ```
 ## Loop
 ```py
-mama aida hoilo a = 0;
-  jotokhon porjonto mama (a < 10) {
+bondhu aida hoilo a = 0;
+  jotokhon porjonto bondhu (a < 10) {
    a += 1;
-   jodi mama (a == 5) {
-    bol toh mama("loop er bhitor theke boltesi mama ", a);
-    tarpor er tah dekh mama;
+   jodi bondhu (a == 5) {
+    bol toh bondhu("loop er bhitor theke boltesi bondhu ", a);
+    tarpor er tah dekh bondhu;
    }
-   jodi mama (a == 6) {
-    thamis mama;
+   jodi bondhu (a == 6) {
+    thamis bondhu;
    }
-   bol toh mama(a);
+   bol toh bondhu(a);
   }
-  bol toh mama("done");
+  bol toh bondhu("done");
  ```
 ## Function
 ```py
-mama kam da hoilo jog(a,b){
-    de toh mama (a+b);
+bondhu kam da hoilo jog(a,b){
+    de toh bondhu (a+b);
 }
-bol toh mama(jog(5,7))
+bol toh bondhu(jog(5,7))
  ```
 ## Example
 ```py
-mama kam da hoilo multiply(x, y) {
-    de toh mama (x * y);
+bondhu kam da hoilo multiply(x, y) {
+    de toh bondhu (x * y);
 }
 
-mama aida hoilo result = multiply(3, 4);
-bol toh mama("The result is: " + result);
+bondhu aida hoilo result = multiply(3, 4);
+bol toh bondhu("The result is: " + result);
  ```
 
