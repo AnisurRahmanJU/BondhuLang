@@ -1,6 +1,6 @@
 # BondhuLang
 
-## Output
+## Output 
 
 ```py
 bol toh bondhu ("kire bondhu!");
