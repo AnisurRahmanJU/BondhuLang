@@ -1,78 +1,49 @@
 function runCode() {
-  // Get the output element and clear it
   var output = document.getElementById('output');
   output.textContent = '';
 
-  // Get the code from the textarea
   var code = document.getElementById('code').value;
 
   const translations = {
-    'bondhu aida hoilo': 'let', // Variable declaration 
-    'bol toh bondhu': 'console.log', // Print to console
-    'kisuina bondhu': 'null', // Null value
-    'haw bondhu': 'true', // Boolean true value
-    'nah bondhu': 'false', // Boolean false value
-    'jodi bondhu': 'if', // If condition
-    'nah hoile bondhu': 'else if', // Else if condition
-    'akdom e nah hoile': 'else', // Else condition
-    'jotokhon porjonto bondhu': 'while', // While loop
-    'thamis bondhu': 'break', // Break statement
-    'tarpor er tah dekh bondhu': 'continue', // Continue statement
-    'bondhu kam da hoilo': 'function', // Function declaration
-    'de toh bondhu': 'return', // Return statement
+    // Variable & Values
+    'বন্ধু এইডা হইল': 'let',
+    'ধরি বন্ধু': 'let',
+    'কিছুই না বন্ধু': 'null',
+    'হ্যা বন্ধু': 'true',
+    'না বন্ধু': 'false',
+
+    // Output
+    'বল তো বন্ধু': 'console.log',
+
+    // Condition
+    'যদি বন্ধু': 'if',
+    'না হইলে বন্ধু': 'else if',
+    'একদমই না হইলে': 'else',
+
+    // Loop
+    'যতক্ষণ পর্যন্ত বন্ধু': 'while',
+    'থামিস বন্ধু': 'break',
+    'তারপরেরটা দেখ বন্ধু': 'continue',
+
+    // Function
+    'বন্ধু কামডা হইল': 'function',
+    'দে তো বন্ধু': 'return'
   };
 
-  const translateKeywordToJS = (keyword) => {
-    return translations[keyword] || keyword;
-  };
-
-  const convertToJS = (sourceCode) => {
-    Object.keys(translations).forEach((keyword) => {
-      // Use a regex to match whole words only to prevent partial replacements
-      const regex = new RegExp(`\\b${keyword}\\b`, 'g');
-      sourceCode = sourceCode.replace(regex, translations[keyword]);
-    });
-    return sourceCode;
-  };
-
-  // Convert the code to JavaScript
-  code = convertToJS(code);
-
-  // Run the code and capture the output
-  var outputMessage;
-  try {
-    outputMessage = eval(code);
-  } catch (error) {
-    outputMessage = error;
-  }
-
-  // Display the output
-  console.log = function (message) {
-    // Get the output element
-    var output = document.getElementById('output');
-
-    // Append the message to the output element
-    output.textContent += message + '\n';
-  };
-}
-
-// Function to highlight translation keywords in orange
-function highlightKeywords() {
-  const textarea = document.getElementById('code');
-  const translations = [
-    'bondhu aida hoilo', 'bol toh bondhu', 'kisuina bondhu', 'haw bondhu',
-    'nah bondhu', 'jodi bondhu', 'nah hoile bondhu', 'akdom e nah hoile',
-    'jotokhon porjonto bondhu', 'thamis bondhu', 'tarpor er tah dekh bondhu',
-    'bondhu kam da hoilo', 'de toh bondhu'
-  ];
-
-  let highlightedCode = textarea.value;
-  translations.forEach((word) => {
-    const regex = new RegExp(`\\b${word}\\b`, 'g');
-    highlightedCode = highlightedCode.replace(regex, `<span class="highlight">${word}</span>`);
+  // 🔁 বাংলা → JS কনভার্সন
+  Object.keys(translations).forEach((key) => {
+    const regex = new RegExp(key, 'g');
+    code = code.replace(regex, translations[key]);
   });
 
-  textarea.innerHTML = highlightedCode;
-}
+  // 🖨️ console.log ধরছি
+  console.log = function (message) {
+    output.textContent += message + '\n';
+  };
 
-highlightKeywords();
+  try {
+    eval(code);
+  } catch (e) {
+    output.textContent = 'Error: ' + e.message;
+  }
+}
