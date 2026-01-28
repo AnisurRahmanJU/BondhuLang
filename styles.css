@@ -7,7 +7,10 @@ body {
 }
 
 /* ===== Heading ===== */
-h1 { text-align: center; margin-top: 10px; }
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
 
 /* ===== Editor Wrapper ===== */
 .editor-wrapper {
@@ -78,14 +81,19 @@ h1 { text-align: center; margin-top: 10px; }
   line-height: 1.6;
   white-space: pre;
   spellcheck: false;
-  -webkit-user-modify: read-write-plaintext-only; /* iOS Safari spell check disable */
+  -webkit-user-modify: read-write-plaintext-only;
 }
 
-/* Placeholder styling */
-#code::placeholder { color: #aaa; opacity: 1; font-family: 'Hind Siliguri', monospace; }
+#code::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
 
 /* ===== Keyword Highlight ===== */
-.keyword { color: #ff9800; font-weight: 600; }
+.keyword {
+  color: #ff9800;
+  font-weight: 600;
+}
 
 /* ===== Output Box ===== */
 #output {
@@ -94,11 +102,19 @@ h1 { text-align: center; margin-top: 10px; }
   max-width: 900px;
   min-height: 150px;
   padding: 15px;
-  margin: 20px auto;
+  margin: 10px auto 5px auto;
   white-space: pre-wrap;
   overflow-x: auto;
   border: 2px solid #fff;
   border-radius: 8px;
+}
+
+/* ===== Example Button Wrapper (NEW) ===== */
+.example-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  text-align: left;
 }
 
 /* ===== Buttons ===== */
@@ -107,22 +123,53 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 16px;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   transition: all 0.3s ease;
 }
 
-.btn-info { background-color: green !important; border: none !important; color: #fff; }
-.btn-info:hover { background-color: #cc5200 !important; }
-.btn-warning { background-color: #ff9800 !important; border: none !important; color: #fff; }
-.btn-danger { background-color: #f44336 !important; border: none !important; color: #fff; }
+.btn-info {
+  background-color: green !important;
+  border: none !important;
+  color: #fff;
+}
 
-.float-left { float: left; }
+.btn-info:hover {
+  background-color: #1fa34a !important;
+}
+
+.btn-warning {
+  background-color: #ff9800 !important;
+  border: none !important;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #f44336 !important;
+  border: none !important;
+  color: #fff;
+}
 
 /* ===== Responsive ===== */
-@media (max-width: 600px){
-  .editor-wrapper { height: 200px; }
-  #highlight, #code { font-size: 14px; }
-  #lineNumbers { font-size: 12px; }
-  button { padding: 8px 15px; font-size: 14px; }
-  #output { padding: 10px; }
+@media (max-width: 600px) {
+  .editor-wrapper {
+    height: 220px;
+  }
+
+  #highlight,
+  #code {
+    font-size: 14px;
+  }
+
+  #lineNumbers {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  #output {
+    padding: 10px;
+  }
 }
