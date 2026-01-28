@@ -72,6 +72,7 @@ body {
 /* ===== Output ===== */
 #output {
   background-color: #444;
+  width: 80%;
   min-height: 150px;
   padding: 10px;
   white-space: pre-wrap;
@@ -114,5 +115,6 @@ button {
     font-size: 14px;
   }
 }
+
 
 
