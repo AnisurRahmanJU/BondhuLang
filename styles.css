@@ -10,6 +10,7 @@ body {
   color: #fff;
   margin: 0;
   padding: 10px;
+  align:center;
 }
 
 /* ===== Container ===== */
@@ -21,10 +22,9 @@ body {
 .editor-wrapper {
   position: relative;
   width: 80%;
-  height: 400px;
+  height: 500px;
   border: 2px solid #fff;
   background-color: #343a40;
-
   overflow-y: auto;     /* ✅ vertical scroll */
   overflow-x: auto;     /* optional */
 }
@@ -114,4 +114,5 @@ button {
     font-size: 14px;
   }
 }
+
 
