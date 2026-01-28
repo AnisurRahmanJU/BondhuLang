@@ -5,50 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>বন্ধু ভাষা</title>
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<!--  <div class="container">-->
-    <h1 class="text-center mt-4">বন্ধু ভাষা প্রোগ্রামিং</h1>
 
-    <!-- Editor -->
-    <div class="editor-wrapper mt-3">
-      <pre id="highlight"></pre>
-      <textarea
-        id="code"
-        placeholder="এখানে বন্ধু ভাষার কোড লেখো..."
-        oninput="highlightCode()"
-      ></textarea>
-    </div>
+<h1 class="text-center mt-4">বন্ধু ভাষা প্রোগ্রামিং</h1>
 
-    <!-- Buttons -->
-    <div class="mt-3">
-      <button class="btn btn-info" onclick="runCode()">কোড রান করো</button>
-      <button class="btn btn-warning ml-2" onclick="clearCode()">কোড মুছুন</button>
-    </div>
+<div class="editor-wrapper mt-3">
+  <div id="lineNumbers">1</div>
+  <div class="code-container">
+    <pre id="highlight"></pre>
+    <textarea id="code" placeholder="এখানে বন্ধু ভাষার কোড লেখো..."
+      oninput="highlightCode()" onscroll="syncScroll()"></textarea>
+  </div>
+</div>
 
-    <!-- Output -->
-    <h5 class="mt-4">আউটপুট</h5>
-    <div id="output"></div>
+<div class="mt-3 text-center">
+  <button class="btn btn-info" onclick="runCode()">কোড রান করো</button>
+  <button class="btn btn-warning ml-2" onclick="clearCode()">কোড মুছুন</button>
+  <button class="btn btn-danger ml-2" onclick="clearOutput()">আউটপুট মুছুন</button>
+</div>
 
-    <!-- Example + Clear Output -->
-    <div class="mt-3">
-      <a href="https://github.com/AnisurRahmanJU/BondhuLang/blob/main/README.md" target="_blank">
-        <button class="btn btn-info">উদাহরণ</button>
-      </a>
-      <button class="btn btn-danger ml-2" onclick="clearOutput()">আউটপুট মুছুন</button>
-    </div>
- <!-- </div>-->
+<h5 class="mt-4">আউটপুট</h5>
+<div id="output"></div>
 
-  <script src="script.js"></script>
+<div class="mt-2">
+  <a href="https://github.com/AnisurRahmanJU/BondhuLang/blob/main/README.md" target="_blank">
+    <button class="btn btn-info float-left">উদাহরণ</button>
+  </a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
