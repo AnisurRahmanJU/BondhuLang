@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>বন্ধু ভাষা</title>
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +21,8 @@
   <div class="code-container">
     <pre id="highlight"></pre>
     <textarea id="code" placeholder="এখানে বন্ধু ভাষার কোড লেখো..."
-      oninput="highlightCode()" onscroll="syncScroll()"></textarea>
+      oninput="highlightCode()" onscroll="syncScroll()"
+      spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off"></textarea>
   </div>
 </div>
 
