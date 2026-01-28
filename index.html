@@ -3,31 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>বন্ধু ভাষা </title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <title>বন্ধু ভাষা</title>
+
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <div class="container">
       <h1 class="text-center text-white mt-4">বন্ধু ভাষা প্রোগ্রামিং</h1>
-      
-      <!-- Code Input Area (Text Area) -->
-      <textarea style="background-color:#343a40; color: white; height:300px;" id="code" class="form-control"></textarea>
 
-      <!-- Button to run code -->
-      <button class="btn btn-info mt-3" onclick="runCode()">কোড রান করো</button>
+      <!-- Code Input Area -->
+      <textarea
+        style="background-color:#343a40; color:white; height:300px;"
+        id="code"
+        class="form-control"
+        placeholder="এখানে বন্ধু ভাষার কোড লেখো..."
+      ></textarea>
 
-      <!-- Output Area -->
-      <div id="output" class="mt-3"></div>
-	  
-	  <a href="https://github.com/AnisurRahmanJU/BondhuLang/blob/main/README.md" target="_blank"><button class="btn btn-info mt-3">উদাহরণ</button></a>
+      <!-- Run Button -->
+      <button class="btn btn-info mt-3" onclick="runCode()">
+        কোড রান করো
+      </button>
+
+      <!-- Output Label -->
+      <h5 class="text-white mt-3">আউটপুট</h5>
+
+      <!-- Output Area (VISIBLE) -->
+      <div
+        id="output"
+        class="mt-2"
+        style="
+          background-color:#444;
+          color:white;
+          min-height:150px;
+          padding:10px;
+          white-space:pre-wrap;
+        "
+      >
+        <!-- output will appear here -->
+      </div>
+
+      <!-- Example Button -->
+      <a
+        href="https://github.com/AnisurRahmanJU/BondhuLang/blob/main/README.md"
+        target="_blank"
+      >
+        <button class="btn btn-info mt-3">উদাহরণ</button>
+      </a>
     </div>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
-
-
