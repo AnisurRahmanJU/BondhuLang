@@ -16,19 +16,6 @@ function Input(msg = '') {
 }
 
 
-function enToBnBoolean(value) {
-  // যদি value true হয়, "সত্য", false হলে "মিথ্যা"
-  return value ? 'সত্য' : 'মিথ্যা';
-}
-
-// উদাহরণ:
-{
-  console.log(enToBnBoolean(true));   // সত্য
-console.log(enToBnBoolean(false));  // মিথ্যা
-}
-
-
-
 /******************** Syntax Highlight ********************/
 function highlightCode() {
   const textarea = document.getElementById('code');
@@ -125,6 +112,7 @@ function clearCode() {
 function clearOutput() {
   document.getElementById('output').textContent = '';
 }
+
 
 
 
