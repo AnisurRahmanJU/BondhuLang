@@ -22,8 +22,10 @@ function enToBnBoolean(value) {
 }
 
 // উদাহরণ:
-console.log(enToBnBoolean(true));   // সত্য
+{
+  console.log(enToBnBoolean(true));   // সত্য
 console.log(enToBnBoolean(false));  // মিথ্যা
+}
 
 
 
@@ -123,6 +125,7 @@ function clearCode() {
 function clearOutput() {
   document.getElementById('output').textContent = '';
 }
+
 
 
 
