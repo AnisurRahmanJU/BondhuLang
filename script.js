@@ -27,7 +27,7 @@ function highlightCode() {
     'বন্ধু এইডা হইল','ধরি বন্ধু','কিছুই না বন্ধু','হ্যাঁ বন্ধু','না বন্ধু',
     'বল তো বন্ধু','যদি বন্ধু','না হইলে বন্ধু','একদমই না হইলে',
     'যতক্ষণ পর্যন্ত বন্ধু','থামিস বন্ধু','তারপরেরটা দেখ বন্ধু',
-    'বন্ধু কামডা হইল','দে তো বন্ধু','কিছু নে বন্ধু','দৈর্ঘ্য','true','false'
+    'বন্ধু কামডা হইল','দে তো বন্ধু','কিছু নে বন্ধু','দৈর্ঘ্য'
   ];
 
   code = code.replace(/&/g,'&amp;')
@@ -83,8 +83,6 @@ function runCode() {
     'দে তো বন্ধু':'return',
     'কিছু নে বন্ধু':'Input',
     'দৈর্ঘ্য':'length',
-    'true':'সত্য',
-    'false':'মিথ্যা'
   };
 
   Object.keys(translations).forEach(key => {
@@ -113,6 +111,7 @@ function clearCode() {
 function clearOutput() {
   document.getElementById('output').textContent = '';
 }
+
 
 
 
