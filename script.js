@@ -9,6 +9,12 @@ function enToBnNumber(str) {
   return str.replace(/\d/g, d => bn[d]);
 }
 
+/******************** Input Function ********************/
+function Input(msg = '') {
+  const value = prompt(msg);
+  return bnToEnNumber(value ?? '');
+}
+
 /******************** Syntax Highlight ********************/
 function highlightCode() {
   const textarea = document.getElementById('code');
@@ -21,7 +27,7 @@ function highlightCode() {
     'বন্ধু এইডা হইল','ধরি বন্ধু','কিছুই না বন্ধু','হ্যাঁ বন্ধু','না বন্ধু',
     'বল তো বন্ধু','যদি বন্ধু','না হইলে বন্ধু','একদমই না হইলে',
     'যতক্ষণ পর্যন্ত বন্ধু','থামিস বন্ধু','তারপরেরটা দেখ বন্ধু',
-    'বন্ধু কামডা হইল','দে তো বন্ধু'
+    'বন্ধু কামডা হইল','দে তো বন্ধু','কিছু নাও বন্ধু','দৈর্ঘ্য'
   ];
 
   code = code.replace(/&/g,'&amp;')
@@ -35,7 +41,6 @@ function highlightCode() {
 
   highlight.innerHTML = code;
 
-  // Line numbers
   const lines = textarea.value.split('\n');
   lineNumbers.textContent = lines.map((_, i) => i + 1).join('\n');
 }
@@ -58,7 +63,7 @@ function runCode() {
 
   let code = document.getElementById('code').value;
 
-  // ✅ বাংলা সংখ্যা → ইংরেজি (JS বোঝার জন্য)
+  // বাংলা সংখ্যা → ইংরেজি
   code = bnToEnNumber(code);
 
   const translations = {
@@ -75,15 +80,16 @@ function runCode() {
     'থামিস বন্ধু':'break',
     'তারপরেরটা দেখ বন্ধু':'continue',
     'বন্ধু কামডা হইল':'function',
-    'দে তো বন্ধু':'return'
+    'দে তো বন্ধু':'return',
+    'কিছু নাও বন্ধু':'Input',
+    'দৈর্ঘ্য':'length'
   };
 
   Object.keys(translations).forEach(key => {
-    const regex = new RegExp(key, 'g');
-    code = code.replace(regex, translations[key]);
+    code = code.replace(new RegExp(key, 'g'), translations[key]);
   });
 
-  // ✅ console.log override → আউটপুটে বাংলা সংখ্যা
+  // console.log override
   console.log = function(msg) {
     output.textContent += enToBnNumber(String(msg)) + '\n';
   };
