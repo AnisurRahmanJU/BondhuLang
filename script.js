@@ -15,6 +15,7 @@ function Input(msg = '') {
   return bnToEnNumber(value ?? '');
 }
 
+/******************** Boolean → বাংলা ********************/
 function convertBoolToBangla(text) {
   if (text === true) return 'সত্য';
   if (text === false) return 'মিথ্যা';
@@ -95,8 +96,9 @@ function runCode() {
     code = code.replace(new RegExp(key, 'g'), translations[key]);
   });
 
-  // console.log override
+  // console.log override (✔ সত্য / মিথ্যা fix)
   console.log = function(msg) {
+    msg = convertBoolToBangla(msg);
     output.textContent += enToBnNumber(String(msg)) + '\n';
   };
 
@@ -117,11 +119,3 @@ function clearCode() {
 function clearOutput() {
   document.getElementById('output').textContent = '';
 }
-
-
-
-
-
-
-
-
