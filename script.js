@@ -15,6 +15,11 @@ function Input(msg = '') {
   return bnToEnNumber(value ?? '');
 }
 
+function convertBoolToBangla(text) {
+  if (text === true) return 'সত্য';
+  if (text === false) return 'মিথ্যা';
+  return text;
+}
 
 /******************** Syntax Highlight ********************/
 function highlightCode() {
@@ -112,6 +117,7 @@ function clearCode() {
 function clearOutput() {
   document.getElementById('output').textContent = '';
 }
+
 
 
 
